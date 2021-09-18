@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>photos/submit.png</file>
+    <file>photos/password.png</file>
+    <file>photos/account.png</file>
+    <file>photos/nature2.jpg</file>
+  </qresource>
+</RCC>
