@@ -1,0 +1,32 @@
+class Student:
+  def __init__(self,name,age,grade,bill=None):
+    self.name=name
+    self.age=age
+    self.grade=grade
+    self.bill=bill 
+  def __str__(self):
+    return str([self.name,self.age,self.grade,self.bill])
+  def info(self):
+    return 'My name is ' +self.name+ ' and i am '+ str(self.age) +' years old'
+  def bill_update(self,bill):
+    if self.bill!=None:
+      self.bill-=bill
+      return "your new bill is "+ str(self.bill)
+    else: 
+      return 'You have no bill value !'
+  def name_change(self,new_name):
+    self.name=new_name
+    return "your new name is  "+ self.name
+  def check_status(self):
+    if self.age>30: return "You are an adult"
+    elif self.age>19: return 'You are an young adult'
+    elif self.age>12: return 'You are a teenager'
+    elif self.age > 3: return 'You are a kid '
+    elif self.age>1 : return 'You are a toddler'
+    else: return "You are an infant"
+student1= Student('ahmad',2,12,800)
+print(student1)
+student1.info()
+student1.bill_update(200)
+student1.name_change('ali')
+student1.check_status()
